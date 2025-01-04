@@ -62,7 +62,8 @@ function t(key: string | undefined) {
     'TDM': '团队死斗',
     'TDM - DeadEye': '团队死斗 - 无护盾',
     'Gun Run': '子弹时间',
-    'Lockdown': '封锁'
+    'Lockdown': '封锁',
+    'Big TDM': '大型团队死斗',
   }
   const translated = DICT[key]
 
