@@ -84,12 +84,12 @@ export function apply(ctx: Context, config: Config) {
   logger.debug('Apex Legend helper started')
 
   ctx.command('apexmap').action(async () => {
-    const res = JSON.parse((await ctx.http.get(`${apiBaseUrl}/maprotation`, {
+    const res = (await ctx.http.get(`${apiBaseUrl}/maprotation`, {
       params: {
         auth: config.apikey,
         version: 2
       }
-    })))
+    }))
 
     if (res.Error || !res.battle_royale) {
       logger.error(typeof res)
